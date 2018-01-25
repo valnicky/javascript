@@ -1,0 +1,109 @@
+<!--str.length;
+// indexOf() and lastIndexOf() returns -1 if it is not find
+str.indexOf("nombre");
+str.indexOf("locate", 15);
+let pos = str.lastIndexOf("locate"); //lastIndexOf("locate", 5);
+searching a string in a string
+str.search("locate");
+
+There are 3 methods for extracting a part of a string:
+
+slice(start, end)
+substring(start, end)
+substr(start, length)
+
+
+str.charAt(0); 
+
+var txt = "a,b,c,d,e";   // String
+txt.split(",");          // Split on commas
+txt.split(" ");          // Split on spaces
+txt.split("|");          // Split on pipe
+
+Math.floor(Math.random() * 10) + 1;  // returns a number between 1 and 10
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;//between min (included) and max (excluded):
+}
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}//between min and max (both included):
+
+
+var cars = new Array("Saab", "Volvo", "BMW");
+var name = cars[0];
+cars[0] = "Opel";
+
+var person = {firstName:"John", lastName:"Doe", age:46};
+
+var x = cars.length;   // The length property returns the number of elements
+var y = cars.sort();   // The sort() method sorts arrays
+
+<script>
+var fruits, text, fLen, i;
+
+//looping array elements
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+fLen = fruits.length;
+text = "<ul>";
+for (i = 0; i < fLen; i++) {
+    text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ul>";
+document.getElementById("demo").innerHTML = text;
+</script>
+
+//adding element to array
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+    fruits.push("Lemon");
+    document.getElementById("demo").innerHTML = fruits;
+}
+</script>
+//or using length add elem to array
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+    fruits[fruits.length] = "Lemon";
+    document.getElementById("demo").innerHTML = fruits;
+
+var fruits, text, fLen, i;
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits[5] = "Lemon";
+
+fLen = fruits.length;
+text = "";
+for (i = 0; i < fLen; i++) {
+    text += fruits[i] + "<br>";
+
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = isArray(fruits);
+
+function isArray(myArray) {
+    return myArray.constructor.toString().indexOf("Array") > -1;
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var str = "Hello";
+var arr = str.split("");
+var text = "";
+var i;
+for (i = 0; i < arr.length; i++) {
+    text += arr[i] + "<br>"
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
