@@ -1,12 +1,11 @@
-
-Crazy String
+/*Crazy String
 Write a function that takes a string as an argument and returns another string exactly like the examples below
 
 strManip("abcd")    // AbAc-BcBd-CdC-DD
 strManip("hello")  // HeHl-ElEl-LlLo-LoL-OO
 strManip("hi")    // HiH-II
 strManip("A")    // AA
-strManip("cAt") // CaCt-AtA-TT
+strManip("cAt") // CaCt-AtA-TT*/
 
 
 const pattern = (currentChar, nextChar = '', next2Char = '') => {

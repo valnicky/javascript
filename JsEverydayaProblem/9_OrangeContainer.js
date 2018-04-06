@@ -1,10 +1,10 @@
 /*We have number of containers , every container contains a number of oranges, this number can be even or odd, the seller needs to populate the 
-containers on the table but in a certain pattern, he needs to sort them from left to right in a ascending order but but every two even number oranges 
+containers on the table but in a certain pattern, he needs to sort them from left to right in a ascending order but every two even number oranges 
 containers should have one odd in between, odd containers also should be arranged in ascending pattern, if there are no more containers of one type, the 
 seller would continue populating the containers of the type still present in ascending way till there are no more containers
 
-Write a function that populates the containers in ascending pattern depending on the number of oranges taking in consideration the type of this number 
-even or odd.
+Write a function that populates the containers in ascending pattern depending on the number of oranges taking in consideration the type of this 
+number even or odd.
 
 for example, the final result can be like this
 
@@ -28,20 +28,27 @@ if odd array contains elements after loop is finished i concatenate it to the fi
 
 function run(x)
 {
-	var ev=[];
-	var odd=[];
-	for (var i=0;i<x.length;i++)
+	let ev=[];
+	let odd=[];
+
+	for (let i=0; i<x.length; i++)
 	{
-		if (x[i]%2===0)ev.push(x[i]);
+		if (x[i]%2 === 0)  ev.push(x[i]);
 		else odd.push(x[i]);
 	}
+
 	ev.sort(function(a,b){return a-b});
 	odd.sort(function(a,b){return a-b});
-	for (var i=0;i<ev.length;i++)
+
+	for (let i=0; i<ev.length; i++)
 	{
-		if (i%2!==0&&odd.length>0)ev.splice(i,0,Number(odd.splice(0,1)));
+		if (i%2 !== 0 && odd.length > 0)  ev.splice(i,0,Number(odd.splice(0,1)));
 	}
-	if (odd.length>0)ev=ev.concat(odd);
+
+	if (odd.length>0) ev=ev.concat(odd);
+
 	return ev;
 
 }
+
+console.log(run([72,0,12,13,22,3,28,54,42,76,50,17,53,7]));  //[0,3,12,7,22,13,28,17,42,53,50,54,72,76]));

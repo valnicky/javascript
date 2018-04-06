@@ -13,8 +13,10 @@ numToAlphabet([13,100,25,20,-1])//mzyta*/
 
 const numToAlphabet = arr => arr.map(element => element <= 0 ? 'a' : element > 26 ? 'z' : String.fromCharCode(element + 96)).join("");
 
+console.log(numToAlphabet([0,1,2,3,4]));//aabcd
+console.log(numToAlphabet([13,100,25,20,-1]));//mzyta*/
 
-function numToAlphabet(arr){
+function numToAlphabe(arr){
 	let str = '';
 	
 	for(let i = 0; i < arr.length; i++){
@@ -27,7 +29,11 @@ function numToAlphabet(arr){
 	return str;
 }
 
-const numToAlphabet = arr => {
+console.log(numToAlphabe([0,1,2,3,4]));//aabcd
+console.log(numToAlphabe([13,100,25,20,-1]));//mzyta*/
+
+
+const numToAlphabt = arr => {
   // a -> 97 z -> 122
   let firstLetterCode = 96;
   const result = [];
@@ -44,3 +50,6 @@ const numToAlphabet = arr => {
   }
   return result.join('');
 };
+
+console.log(numToAlphabt([0,1,2,3,4]));//aabcd
+console.log(numToAlphabt([13,100,25,20,-1]));//mzyta*/

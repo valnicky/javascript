@@ -1,13 +1,11 @@
-Write a function that takes a string as an argument and returns the most repeated character in this string(just one), if most repeated characters are more than one(repeated by the same number) return null
-
+/*Write a function that takes a string as an argument and returns the most repeated character in this string(just one), if most repeated characters 
+are more than one(repeated by the same number) return null
 For example
-
 mostRepeated("hello")  // l
 
 mostRepeated("Hi javaScript masters"); // a
 
-mostRepeated("Udacity");  // null
-
+mostRepeated("Udacity");  // null*/
 
 function mostRepeated(str) {
   const store = {};
@@ -27,16 +25,11 @@ console.log(mostRepeated("hello"));  // l
 console.log(mostRepeated("Hi javaScript masters")); // a
 console.log(mostRepeated("Udacity"));  // null
 
+/*copy string, turn it into array of characters, remove multiples, so array has 1 from each character, count occurence of each character in 
+original string, find highest occurence value, check if there’s more than one letter with the same highest occurence
+find the matching index to the highest occurence, return character based on index*/
 
-copy string, turn it into array of characters
-remove multiples, so array has 1 from each character
-count occurence of each character in original string
-find highest occurence value
-check if there’s more than one letter with the same highest occurence
-find the matching index to the highest occurence, return character based on index
-
-
-function mostRepeated(str){
+function mostRepeat(str){
   let s = str.slice().split(""); 
   let i = s.length;
   while (i--) {
@@ -77,3 +70,7 @@ function mostRepeated(str){
 
      }
 }
+
+console.log(mostRepeat("hello"));  // l
+console.log(mostRepeat("Hi javaScript masters")); // a
+console.log(mostRepeat("Udacity"));  // null

@@ -1,17 +1,14 @@
-Remove All Copies
-Write a function that remove all repeated elements in array represents the argument of the function, the remaining elements should be in the same order as original one.
+/*Remove All Copies
+Write a function that remove all repeated elements in array represents the argument of the function, the remaining elements should be in the same
+ order as original one.
 
 For example
-
 removeCopies([5,8,4,8,3,2,1,5]); // [4,3,2,1]
-removeCopies([1,6,"a",6,"b",7,8,"a",1]); // ["b",7,8]
-
-
+removeCopies([1,6,"a",6,"b",7,8,"a",1]); // ["b",7,8]*/
 
 const removeCopies = (array) => array.filter((val, i) => (array.lastIndexOf(val) === i) && (array.indexOf(val) === i));
 
-
-const removeCopies = arr => {
+const removeCopie = arr => {
     const result = [];
     const blackList = [];
     // Loop through array
@@ -29,3 +26,9 @@ const removeCopies = arr => {
     }
     return result;
 };
+
+console.log(removeCopies([5,8,4,8,3,2,1,5])); // [4,3,2,1]
+console.log(removeCopies([1,6,"a",6,"b",7,8,"a",1])); // ["b",7,8]
+
+console.log(removeCopie([5,8,4,8,3,2,1,5])); // [4,3,2,1]
+console.log(removeCopie([1,6,"a",6,"b",7,8,"a",1])); // ["b",7,8]

@@ -9,15 +9,19 @@ Note: assume array elements are positive numbers
 
 // With .sort
 
-function sum(arr) {
+/*function sum(arr) {
     return arr.sort(function (a,b){return a-b;}).slice(-2).reduce(function (total, num) {return total + num;});
-}
+}*/
 
 
 // Non-sort method
 
 function sum(arr) {
-    var largest = Math.max(...arr);
+    let largest = Math.max(...arr);
     arr.splice(arr.indexOf(largest),1);
     return largest + Math.max(...arr);
 }
+
+
+console.log(sum([5,12,4,2,36])); // 48
+console.log(sum([60,70,80,90,100,200] )); //300

@@ -1,8 +1,8 @@
-/*Write a function that takes an array of numbers as arguments and returns an array of numbers represents the original array but sorted by the sum of every two opposite elements in the array, the least sum
-put the two elements toward the middle of the array , the bigger should be toward the extremities,
-
-Every two opposite elements means that if one is at index i the opposite should be at index (length-1-i) so element at index 0 is the opposite of element at index 6 in 7 elements array.
-
+/*Write a function that takes an array of numbers as arguments and returns an array of numbers represents the original array but sorted by the 
+sum of every two opposite elements in the array, the least sum put the two elements toward the middle of the array , the bigger should be toward 
+the extremities,
+Every two opposite elements means that if one is at index i the opposite should be at index (length-1-i) so element at index 0 is the opposite of 
+element at index 6 in 7 elements array.
 For example
 
 sortSum([1,5,4,6]); // [5,1,6,4]
@@ -12,13 +12,13 @@ Explanation of last example
 2 is opposite to 3,
 14=>17,
 6 =>8 ,
-5 is in the middle=> no opposite element, so now 2 and 3 are toward the middle, then 6 and 8 then 14 and 17 at extremities*/
+5 is in the middle=> no opposite element, so now 2 and 3 are toward the middle, then 6 and 8 then 14 and 17 at extremities
 
 I start by slicing the original array in two(excluding the number in the middle, if there is one);
 Then I sort the first array so that the bigger number is on the left;
 I do the same for the second array(inverted this time);
 If there is a middle number concat it to the arrays;
-If not just concat the both arrays and return;
+If not just concat the both arrays and return;*/
 
 function sortSum(arr) {
     let aux1 = arr.slice(0, Math.floor(arr.length / 2));
@@ -29,9 +29,11 @@ function sortSum(arr) {
         return aux1.sort((a, b) => a < b).concat([arr[Math.floor(arr.length / 2)]]).concat(aux2.sort((a, b) => a > b));
 }
 
+console.log(sortSum([1,5,4,6])); // [5,1,6.4]
+console.log(sortSum([2,14,6,5,8,17,3])); // [14,6,2,5,3,8,17]
+console.log(sortSum([0,1,10,2,6,17,5,14,8,3,22,1,2])); // [10, 17, 6, 2, 0, 1, 5, 1, 2, 3, 8, 14, 22]
 
-
-function sortSum(arr) {
+function sortSu(arr) {
   let temp;
   let flag = true;    
 
@@ -53,13 +55,11 @@ function sortSum(arr) {
   return arr;
 }
 
-console.log(sortSum([1,5,4,6])); // [5,1,6.4]
-console.log(sortSum([2,14,6,5,8,17,3])); // [14,6,2,5,3,8,17]
-console.log(sortSum([0,1,10,2,6,17,5,14,8,3,22,1,2])); // [10, 17, 6, 2, 0, 1, 5, 1, 2, 3, 8, 14, 22]
+console.log(sortSu([1,5,4,6])); // [5,1,6.4]
+console.log(sortSu([2,14,6,5,8,17,3])); // [14,6,2,5,3,8,17]
+console.log(sortSu([0,1,10,2,6,17,5,14,8,3,22,1,2])); // [10, 17, 6, 2, 0, 1, 5, 1, 2, 3, 8, 14, 22]
 
-
-
-function sortSum(arr) {
+function sortS(arr) {
   let temp;
   let swapped = true;     // whether any elements have been swapped in the current iteration of the while loop
   let end = arr.length / 2 - 1;   // variable end for the "for" loop
@@ -88,10 +88,11 @@ function sortSum(arr) {
   return arr;
 }
 
-console.log(sortSum([1,5,4,6])); // [5,1,6.4]
-console.log(sortSum([2,14,6,5,8,17,3])); // [14,6,2,5,3,8,17]
+console.log(sortS([1,5,4,6])); // [5,1,6.4]
+console.log(sortS([2,14,6,5,8,17,3])); // [14,6,2,5,3,8,17]
+console.log(sortS([0,1,10,2,6,17,5,14,8,3,22,1,2])); // [10, 17, 6, 2, 0, 1, 5, 1, 2, 3, 8, 14, 22]
 
-const sortSum = arr => {
+const sortSm = arr => {
   // store result
   const result = [];
   // Store each opposite numbers
@@ -167,3 +168,7 @@ const sortSum = arr => {
   
   return result;
 };
+
+console.log(sortSm([1,5,4,6])); // [5,1,6.4]
+console.log(sortSm([2,14,6,5,8,17,3])); // [14,6,2,5,3,8,17]
+console.log(sortSm([0,1,10,2,6,17,5,14,8,3,22,1,2])); // [10, 17, 6, 2, 0, 1, 5, 1, 2, 3, 8, 14, 22]

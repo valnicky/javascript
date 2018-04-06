@@ -1,15 +1,12 @@
-How Much Repeated
-Write a function that takes a string as an argument and returns a number represents the frequency of most repeated word in the string, if no one repeated return 1.
-
+/*How Much Repeated
+Write a function that takes a string as an argument and returns a number represents the frequency of most repeated word in the string, if no one 
+repeated return 1.
 For example
 
 numRepeated("thank you, many thanks") // 1
-numRepeated("thank you, thank you again"); // 2
+numRepeated("thank you, thank you again"); // 2*/
 
-
-
-
- first solution: object
+// first solution: object
 const numRepeated = (str) => {
   const words = str.match(/([A-Z])\w+/gi);
   let counter = {},
@@ -29,8 +26,8 @@ console.log(numRepeated("thank you, thank you again")); // 2
 console.log(numRepeated("thank you, Mississippi assassin, thank you again, master assassin, you are definitely the assassin from Mississippi")); // 3
 
 
-second solution: map
-const numRepeated = (str) => {
+//second solution: map
+const numRepeat = (str) => {
   const words = str.match(/([A-Z])\w+/gi);
   let counter = new Map(),
       max = 1;
@@ -44,15 +41,12 @@ const numRepeated = (str) => {
   return counter, max;
 };
 
-console.log(numRepeated("thank you, many thanks")); // 1
-console.log(numRepeated("thank you, thank you again")); // 2
-console.log(numRepeated("thank you, Mississippi assassin, thank you again, master assassin, you
+console.log(numRepeat("thank you, many thanks")); // 1
+console.log(numRepeat("thank you, thank you again")); // 2
+console.log(numRepeat("thank you, Mississippi assassin, thank you again, master assassin, you are definitely the assassin from Mississippi")); // 3
 
 
-
-
-
-const numRepeated = (str) => {
+const numRepeate = (str) => {
   const words = str.split(/[^a-z]+/i);
   words.forEach((val, i) => {
     let counter = 1,
@@ -68,6 +62,6 @@ const numRepeated = (str) => {
   return Math.max(...words);
 };
 
-console.log(numRepeated("thank you, many thanks")); // 1
-console.log(numRepeated("thank you, thank you again")); // 2
-console.log(numRepeated("thank you, Mississippi assassin, thank you again, master assassin, you are definitely the assassin from Mississippi")); // 3
+console.log(numRepeate("thank you, many thanks")); // 1
+console.log(numRepeate("thank you, thank you again")); // 2
+console.log(numRepeate("thank you, Mississippi assassin, thank you again, master assassin, you are definitely the assassin from Mississippi")); // 3

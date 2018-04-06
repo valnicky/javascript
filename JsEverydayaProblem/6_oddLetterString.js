@@ -6,12 +6,15 @@ For example:
 midChars(["Happy","New","Year","All","Friends"]); // pele
 */
 
-function oddLetterString(words) {
-    oddWord = "";
-    for (i = 0; i < words.length; i++) {
+function midChars(words) {
+    let oddWord = "";
+    for (let i = 0; i < words.length; i++) {
       if (words[i].length % 2 !== 0) {
         oddWord += words[i].charAt(Math.floor(words[i].length/2));
       }
     }
     return oddWord;
   }
+
+
+  console.log(midChars(["Happy","New","Year","All","Friends"])); // pele
