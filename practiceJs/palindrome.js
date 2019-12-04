@@ -36,4 +36,5 @@ if(len > 1){
 console.log(checkPalindrome("aabaa"));
 console.log(checkPalindrome("abac"));
 console.log(checkPalindrome("a"));
-console.log(checkPalindrome("hlbeeykoqqqqokyeeblh"));
+console.log(checkPalindrome("apapa"));
+console.log(checkPalindrome("paap"));

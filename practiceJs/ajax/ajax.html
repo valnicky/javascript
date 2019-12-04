@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function func_loadXMLDoc() {
+				var variable_xmlhttp;
+				if(window.XMLHttpRequest){
+				//code for IE7+ firefox chrome opera safari
+
+					variable_xmlhttp = new XMLHttpRequest();
+				} else {
+					//ie6 ie5
+					variable_xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+
+				variable_xmlhttp.onreadystatechange = function() {
+					if(variable_xmlhttp.readyState == 4 && variable_xmlhttp.status == 200) {
+				document.getElementById('myDiv').innerHTML = variable_xmlhttp.responseText;		
+					}
+				}
+
+				variable_xmlhttp.open("GET", "ajax.txt", true);
+				variable_xmlhttp.send();
+
+			}
+		</script>
+	</head>
+<body>
+	<div id="myDiv">
+		<h2>Let AJAX change this text</h2>
+		<button type="button" onclick="func_loadXMLDoc()">Change Content</button>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>Change pics</title>
+		<style>
+			#myHeader {
+		color: purple;
+		text-align: center;
+		}
+		#image_canvas {
+		width: 650px;
+		height: auto;
+		margin: 0 auto;
+		animation: fadeInAnimation ease 6s;
+		animation-iteration-count: 3;
+		animation-fill-mode: forwards;
+		}
+		#image_canvas img {
+		width: 100%;
+		height: auto;
+		}
+		
+		@keyframes fadeInAnimation {
+		0% {
+		opacity: 0;
+		}
+		50% {
+		opacity: 0.5;
+		}
+		100% {
+		opacity: 1;
+		}
+		}
+		</style>
+	</head>
+	<body onload="load();">
+		<h1 id="myHeader" style="margin: 0 auto; color: purple;">My Pictures</h1>
+		<div id="image_canvas" style="width: 750px; height: auto; margin: 0 auto;">
+			<img  src= '' alt="" style="width:100%; height: auto;">
+		</div>
+		
+		<script>
+		var pictures = [
+		"https://i.postimg.cc/259kmJSt/pexels-photo-314703.jpg",
+		"https://i.postimg.cc/RVQ6K6NY/outdoorchallenge-clouds-cloudscape-904110.jpg",
+		"https://i.postimg.cc/SR2pyNv2/sunset-2274512-1920.jpg"
+		];
+		function load() {
+		//document.getElementById('image_canvas').getElementByTagName('img')[0].src = pictures[0];
+		changePic(0);
+		console.log(changePic(0));
+		}
+		function changePic(n) {
+		document.getElementById("image_canvas").getElementsByTagName("img")[0].src =
+		pictures[n % pictures.length];
+		setTimeout(function() {changePic(n + 1);}, 5000)
+		}
+		</script>
+	</body>
+</html>

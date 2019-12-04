@@ -1,0 +1,23 @@
+contacts {
+
+	PhoneBook {
+		"objectid":"String",
+		"owner":"Contact",
+		"contacts":"Contact[]"
+	},
+	Contact {
+		"objectId":"String",
+		"phone":"String",
+		"name":"String",
+		"title":"String",
+		"age":"int",
+		"address":"Address"
+	},
+	Address {
+		"objectId":"String",
+		"street":"String",
+		"city":"String",
+		"state":"String"
+	}
+
+}
