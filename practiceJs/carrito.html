@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Proyecto 7</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		
+</head>
+<body>
+	<form action="" id="formulario">
+		<p>Seleccione un producto<br/>
+		<select name="Productos" id="" size="1">
+			<option value="">Productos</option>
+			<option value="Patatas">Patatas</option>
+			<option value="Judias">Judias</option>
+			<option value="Acelgas">Acelgas</option>
+			<option value="Tomates">Tomates</option>
+			<option value="Melocotones">Melocotones</option>
+			<option value="Manzanas">Manzanas</option>
+
+		</select>
+		<input type="button" value="Añadir" onclick="PasarTexto(form.elements[0].options[form.Productos.selectedIndex].value)"/></p>
+	</form>
+	<form action="" id="Destino">
+		<p>Elementos a&ntilde;adidos<br/>
+		<textarea name="CajaItems" id="" cols="20" rows="5"></textarea></p>
+	</form>
+
+	<script type="text/javascript">
+		valorAnterior = "";
+		function PasarTexto(item){
+			if(item != ""){
+				var cesta = item + "\n" + valorAnterior;
+				document.forms.Destino.CajaItems.value = cesta;
+				valorAnterior = document.forms[1].CajaItems.value;
+			}
+		}
+	</script>
+</body>
+</html>

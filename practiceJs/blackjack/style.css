@@ -1,0 +1,44 @@
+body {
+  background-color: #1e3148;
+  color: #e6d7d5;
+  font-family: Gupter, Arial;
+  padding: 1em;
+}
+
+#title {
+  text-align: left;
+  color: #43b14b;
+  width: 200px;
+  display: inline-block;
+}
+
+#title span {
+  font-size: 0.5em;
+  color: #e6d7d5;
+}
+
+#text-area {
+  text-align: center;
+  font-size: 1.5em;
+  width: 100%;
+}
+
+#btns-area {
+  margin-left: 30%;
+  width: 100%;
+}
+
+#btns-area .btn {
+  margin-right: 1em;
+  width: 200px;
+  background-color: #9e6f6d;
+  color: #1e3148;
+  font-weight: 800;
+  padding: 0.4rem 0.5rem;
+}
+
+.win_lose {
+  font-size: 2em;
+  color: #43b14b;
+  font-weight: 900;
+}

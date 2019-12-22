@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>Creaci&oacute;n de objetos</title>
+	</head>
+	<body>
+		<p>Seleccione un objeto</p>
+		<br/>
+		<form action="" id="formu">
+			<p>
+				<input type="radio" name='1' onclick="alert1()"/>mipc <br/>
+				<input type="radio" name="1" onclick="alert2()"/>mipc2<br/>
+				<input type="radio" name='1' onclick="alert3()"/>mipc3<br/>
+			</p>
+		</form>
+
+		<script type="text/javascript">
+				function pc(marca, cpu, memoria){
+					this.marca = marca;
+					this.cpu = cpu;
+					this.memoria = memoria;
+				}
+				mipc = new pc("GigaByte", "AMD K-8", "1.024Mb");
+				mipc2 = new pc("Philips", "Pentium IV", "512Mb");
+				mipc3 = new pc("AlphaServer", "64-bit alpha", "512Gb");
+				var mensaje;
+
+
+
+			function alert1(){
+				alert("mipc\rmarca: " + mipc.marca + "\n" + 
+					"cpu: "+ mipc.cpu + "\n"
+					+ "memoria: " + mipc.memoria + "\n");
+			}
+			function alert2(){
+				alert("mipc2\rmarca: " + mipc2.marca + "\n" +
+					"cpu: " + mipc2.cpu +"\n" + 
+					"memoria: " + mipc2.memoria + "\n");
+			}
+			function alert3(){
+				alert("mipc3\rmarca: " + mipc3.marca + "\n" +
+					"cpu: " + mipc3.cpu +"\n" + 
+					"memoria: " + mipc3.memoria + "\n");
+			}
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
