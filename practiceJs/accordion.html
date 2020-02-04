@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fruits</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Fruktur&display=swap");
+
+h1 {
+  color: #800080;
+  font-family: "Fruktur", "cursive";
+  font-weight: 500;
+}
+
+[data-icon]:before {
+  font-family: icons;
+  content: attr(data-icon);
+  speak: none;
+}
+
+.accordion {
+  border-radius: 25px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion__btn {
+  width: 100%;
+  padding: 2.5rem 2rem;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+.accordion__btn:focus {
+  outline: 0;
+}
+
+.accordion__p {
+  float: left;
+  font-size: 1.4rem;
+  text-align: left;
+}
+.accordion__span {
+  margin-right: 30px;
+  font-weight: 900;
+  font-size: 1.4rem;
+  float: right;
+  margin-top: -8px;
+}
+.accordion__hide {
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+}
+.display_none {
+  display: none;
+}
+.display_flex {display: flex;}
+.accordion__img {
+  width: 150px;
+  padding: 1rem;
+}
+.accordion__img img {
+  width: 100%;
+  height: auto;
+}
+
+.accordion__text {
+  width: 60%;
+  margin: 0 auto;
+  padding: 1rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+}
+
+.orange,
+.orange .accordion__btn {
+  background-color: #ffa500;
+  color: #ffddff;
+  border-radius: 25px 25px 0 0;
+}
+.strawberry,
+.strawberry .accordion__btn {
+  background-color: #ff0000;
+  color: #ffddff;
+}
+
+.kiwi,
+.kiwi .accordion__btn {
+  background-color: #008000;
+  color: #ffddff;
+}
+
+.pear,
+.pear .accordion__btn {
+  background-color: #ffd700;
+  color: #fff;
+  border-radius: 0 0 25px 25px;
+}
+
+.accordion__fruit:hover {
+  opacity: 0.8;
+}
+
+.minus::after {
+  color: #fff;
+  content: "-";
+  position: absolute;
+  top: 35px;
+  right: 64px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffddff;
+}
+
+@media screen and (max-width: 600px) {
+  .accordion__text {
+    font-size: 1em;
+  }
+  .accordion__img {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .accordion__text, .accordion__img {
+    margin: 0 auto;
+  }
+  .accordion__text {
+    width: 90%;
+  }
+  .accordion__hide {
+    flex-direction: column;
+  }
+}
+
+    </style>
+  </head>
+  <h1>Fruits</h1>
+  <div class="accordion">
+    <div class="accordion__fruit orange">
+      <button class="accordion__btn">
+        <span class="accordion__p">ORANGE </span>
+        <span
+          class="accordion__span"
+          aria-hidden="true"
+          data-icon="&#x002b;"
+        ></span>
+      </button>
+      <div class="accordion__hide display_none">
+        <div class="accordion__img">
+          <img src="https://i.postimg.cc/Kv2FQrfd/orange.png" alt="orange" />
+        </div>
+        <p class="accordion__text">
+          Oranges are a good source of vitamin C, as well as several other
+          vitamins, minerals, and antioxidants. For this reason, they may lower
+          your risk of heart disease and kidney stones.
+        </p>
+      </div>
+    </div>
+    <div class="accordion__fruit strawberry">
+      <button class="accordion__btn">
+        <span class="accordion__p">STRAWBERRY</span>
+        <span
+          class="accordion__span"
+          aria-hidden="true"
+          data-icon="&#x002b;"
+        ></span>
+      </button>
+      <div class="accordion__hide display_none">
+        <div class="accordion__img">
+          <img src="https://i.postimg.cc/2ypYs4DL/eat.png" alt="strawberry" />
+        </div>
+        <p class="accordion__text">
+          These potent little packages protect your heart, increase HDL (good)
+          cholesterol, lower your blood pressure, and guard against cancer.
+          Packed with vitamins, fiber, and particularly high levels of
+          antioxidants known as polyphenols, strawberries are a sodium-free,
+          fat-free, cholesterol-free, low-calorie food.
+        </p>
+      </div>
+    </div>
+    <div class="accordion__fruit kiwi">
+      <button class="accordion__btn">
+        <span class="accordion__p">KIWI</span
+        ><span
+          class="accordion__span"
+          aria-hidden="true"
+          data-icon="&#x002b;"
+        ></span>
+      </button>
+      <div class="accordion__hide display_none">
+        <div class="accordion__img">
+          <img src="https://i.postimg.cc/tJhbpYqS/kiwi.png" alt="kiwi" />
+        </div>
+        <p class="accordion__text">
+          It's also full of nutrients like vitamin C, vitamin K, vitamin E,
+          folate, and potassium. They also have a lot of antioxidants and are a
+          good source of fiber. Their small black seeds are edible.
+        </p>
+      </div>
+    </div>
+    <div class="accordion__fruit pear">
+      <button class="accordion__btn">
+        <span class="accordion__p">PEAR</span
+        ><span
+          class="accordion__span"
+          aria-hidden="true"
+          data-icon="&#x002b;"
+        ></span>
+      </button>
+      <div class="accordion__hide display_none">
+        <div class="accordion__img">
+          <img src="https://i.postimg.cc/kM8qxhQQ/fruit.png" alt="pear" />
+        </div>
+        <p class="accordion__text">
+          Pears are rich in essential antioxidants, plant compounds, and dietary
+          fiber. They pack all of these nutrients in a fat free, cholesterol
+          free, 100 calorie package. Consuming pears could support weight loss
+          and reduce a person's risk of cancer, diabetes, and heart disease.
+        </p>
+      </div>
+    </div>
+  </div>
+  <p style="text-align:center">
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+      <img
+        style="border:0;width:88px;height:31px;"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="¡CSS Válido!"
+      />
+    </a>
+  </p>
+  <script src="accordion.js"></script>
+</html>
