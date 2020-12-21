@@ -27,3 +27,44 @@ function staircase(n) {
 
 staircase(6);
 staircase(4);
+
+
+
+function staircase2(n) {
+
+    for (let i = 0; i < n; i++) {
+        let spa = '';
+
+        for (let j = 0; j < i; j++) {
+            spa += ' ';
+        }
+        for (let k = 0; k < i + 1; k++) {
+            spa += '*';
+        }
+        console.log(spa);
+
+    }
+}
+
+staircase2(6);
+staircase2(4);
+
+
+function staircase3(n) {
+
+    for (let i = 0; i < n; i++) {
+        let spa = '';
+
+        for (let j = n; j > i; j--) {
+            spa += ' ';
+        }
+        for (let k = 0; k < i + 1; k++) {
+            spa += '*';
+        }
+        console.log(spa);
+
+    }
+}
+
+staircase3(6);
+staircase3(4);
