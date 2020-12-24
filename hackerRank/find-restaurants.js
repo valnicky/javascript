@@ -27,17 +27,6 @@ function findRestaurants(allLocations, numRestaurants) {
     }
     //  console.log(location);
     numRestaurants = location.length;
-    /*
-        for (let k = 0; k < location.length; k++) {
-            for (let j = 0; j < location.length - 1; j++) {
-
-                if (location[j] > location[j + 1]) {
-                    temp = location[j + 1];
-                    location[j + 1] = location[j];
-                    location[j] = temp;
-                }
-            }
-        }*/
 
     let result = location.map((rest) => {
         return parseInt(Math.min(rest));
@@ -74,9 +63,6 @@ function findRestaurants(allLocations, numRestaurants) {
             }
         }
     }
-
-
-    // console.log(secMin + 'index' + secIndex);
 
     console.log(allLocations[indexMin], allLocations[secIndex]);
 }
