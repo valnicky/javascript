@@ -82,3 +82,8 @@ return arr;
 }
 
 sortArr([4,8,7,2,3,9,25]);
+
+function min__max (n1, n2) {
+  let min = n1 > n2 ? n2 : n1;
+  let max = n1 > n2 ? n1 : n2;
+}
