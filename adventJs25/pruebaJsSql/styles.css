@@ -1,0 +1,15 @@
+input {
+    text-align: right;
+}
+
+body form button {
+    position: absolute;
+    padding: 2px 25px;
+    top: 50px;
+    left: 12px;
+}
+
+.output {
+    font-family: monospace;
+    margin-top: 70px;
+}
